@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EcommerceApp</string>
+    <string name="start">Start</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="on_boarding_1">للمصممين نص لوريم ايبسوم بالعربي عربي انجليزي لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم  للمصممين نص لوريم ايبسوم بالعربي عربي انجليزي لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم</string>
+    <string name="on_boarding_2">rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</string>
+    <string name="on_boarding_3">regergergregergerg</string>
+    <string name="please_enter_email">أدخل الايميل</string>
+    <string name="please_enter_password">أدخل كلمة المرور</string>
+</resources>
