@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".feature.main.support.SupportFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/UserNameText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/_40sdp"
+        android:background="#E5E5E5"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:hint="اسم المستخدم"
+        android:textSize="@dimen/_14sdp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_30sdp"/>
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#E5E5E5"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:padding="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:textSize="@dimen/_14sdp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/UserNameText"
+        android:paddingStart="@dimen/_20sdp"
+        android:hint="الايميل"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_16sdp"/>
+    <EditText
+        android:id="@+id/nameAdressText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#E5E5E5"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:padding="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:textSize="@dimen/_14sdp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/emailText"
+        android:paddingStart="@dimen/_20sdp"
+        android:hint="عنوان الرسالة"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_16sdp"/>
+    <EditText
+        android:id="@+id/messageText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#E5E5E5"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:padding="@dimen/_8sdp"
+        android:gravity="top"
+        android:paddingEnd="@dimen/_20sdp"
+        android:textSize="@dimen/_14sdp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/materialButton"
+        app:layout_constraintTop_toBottomOf="@id/nameAdressText"
+        android:paddingStart="@dimen/_20sdp"
+        android:hint="الرسالة"
+        android:layout_marginBottom="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_16sdp"/>
 
-</FrameLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_44sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_26sdp"
+        android:text="أرسل الرسالة"
+        android:textSize="@dimen/_14sdp"
+        app:cornerRadius="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
