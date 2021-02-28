@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_home">القائمة</string>
+    <string name="nav_offer">العروض</string>
+    <string name="nav_purchases">مشترياتي</string>
+    <string name="nav_account_settings">اعدادات الحساب</string>
+    <string name="technical_support">الدعم الفني</string>
+    <string name="main_drawer_open">open_drawer</string>
+    <string name="main_drawer_close">close_drawer</string>
+    <string name="food_details">المواد الغذائية</string>
+</resources>

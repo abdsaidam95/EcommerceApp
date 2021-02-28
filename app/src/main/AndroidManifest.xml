@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".feature.onBourding.OnBourdingActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".feature.main.MainActivity" />
     </application>
 
 </manifest>

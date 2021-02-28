@@ -3,6 +3,11 @@ package com.example.ecommerceapp.base;
 import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.ecommerceapp.R;
 
 import java.util.Objects;
 
@@ -33,5 +38,16 @@ public class BaseActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setTitle(title);
         Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    public void replaceFragment(Fragment fragment, String tag) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            transaction.replace(R.id.fragmentContainerView, fragment, tag);
+        } else {
+            transaction.replace(R.id.fragmentContainerView, fragment, tag);
+            transaction.addToBackStack(tag);
+        }
+        transaction.commit();
     }
 }

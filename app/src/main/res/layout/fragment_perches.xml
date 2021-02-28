@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.main.home.PerchesFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:background="@drawable/ic_order"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الطلب لاحقا"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#707070"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="@id/image"
+        app:layout_constraintEnd_toEndOf="@id/image"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:text="سيتم ارسال الطلبية في "/>
+    <TextView
+        android:id="@+id/dayText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintEnd_toStartOf="@id/nameDay"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:text="12/02/2018"
+        android:textColor="#707070"
+        android:textSize="@dimen/_16sdp"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bg_edit_text"/>
+    <TextView
+        android:id="@+id/nameHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الساعة"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="#707070"
+        app:layout_constraintTop_toTopOf="@id/hourText"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/hourText"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/hourText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        app:layout_constraintTop_toBottomOf="@+id/nameDay"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintEnd_toStartOf="@id/nameDay"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:text="09:03 Am"
+        android:textColor="#707070"
+        android:textSize="@dimen/_16sdp"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bg_edit_text"/>
+    <TextView
+        android:id="@+id/nameDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اليوم"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="#707070"
+        app:layout_constraintTop_toTopOf="@id/dayText"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/dayText"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_44sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/hourText"
+        app:layout_constraintEnd_toEndOf="@id/nameDay"
+        android:layout_marginBottom="@dimen/_24sdp"
+        app:cornerRadius="@dimen/_8sdp"
+        android:text="تاكيد الطلب"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintVertical_bias="0.15" />
+</androidx.constraintlayout.widget.ConstraintLayout>

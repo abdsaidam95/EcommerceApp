@@ -26,14 +26,18 @@ import androidx.databinding.InverseBindingMethods;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 
 import com.example.ecommerceapp.R;
+import com.example.ecommerceapp.feature.main.home.division.AdapterFood;
+import com.example.ecommerceapp.feature.main.nav.MenuAdapter;
 import com.example.ecommerceapp.feature.onBourding.OnBoarding;
 import com.example.ecommerceapp.feature.onBourding.OnBoardingPagerAdapter;
+import com.example.ecommerceapp.util.SpacesItemDecoration;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -107,11 +111,6 @@ public class BindingAdapterUtils {
 
 
 
-    @BindingAdapter("marginDecoration")
-    public static void setMarginDecoration(RecyclerView view, int margin) {
-        MarginDecoration marginDecoration = new MarginDecoration(view.getContext(), margin);
-        view.addItemDecoration(marginDecoration);
-    }
 
 
     @BindingAdapter("android:src")
@@ -314,6 +313,41 @@ public class BindingAdapterUtils {
         } else {
             view.setImageBitmap(bitmap);
         }
+    }
+    @BindingAdapter("menuAdapter")
+    public static void setMenuAdapter(RecyclerView view, MenuAdapter adapter) {
+        view.setAdapter(adapter);
+        view.setHasFixedSize(false);
+    }
+    @BindingAdapter("FoodAdapter")
+    public static void setFoodAdapter(RecyclerView view, AdapterFood adapter) {
+        view.setLayoutManager(new GridLayoutManager(view.getContext(), 2));
+        view.setAdapter(adapter);
+        view.setHasFixedSize(false);
+
+    }
+    @BindingAdapter("FoodDetailsAdapter")
+    public static void setFoodDetailsAdapter(RecyclerView view, RecyclerView.Adapter adapter) {
+        view.setLayoutManager(new GridLayoutManager(view.getContext(), 2));
+        view.setAdapter(adapter);
+        view.setHasFixedSize(true);
+
+    }
+    @BindingAdapter("FoodPurchesAdapter")
+    public static void setFoodPurchesAdapter(RecyclerView view, RecyclerView.Adapter adapter) {
+        view.setAdapter(adapter);
+        view.setHasFixedSize(true);
+
+    }
+    @BindingAdapter("marginDecoration")
+    public static void setMarginDecoration(RecyclerView view, int margin) {
+        SpacesItemDecoration marginDecoration = new SpacesItemDecoration ( margin);
+        view.addItemDecoration(marginDecoration);
+    }
+    @BindingAdapter("marginDecorationVertical")
+    public static void setMarginDecorationVertical(RecyclerView view, int margin) {
+        MarginDecoration marginDecoration = new MarginDecoration (view.getContext(), margin);
+        view.addItemDecoration(marginDecoration);
     }
 
 

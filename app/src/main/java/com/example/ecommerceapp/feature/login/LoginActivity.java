@@ -11,6 +11,7 @@ import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.base.BaseActivity;
 import com.example.ecommerceapp.databinding.ActivityLoginBinding;
 import com.example.ecommerceapp.feature.forgetPass.ConfirmPasswerdActivity;
+import com.example.ecommerceapp.feature.main.MainActivity;
 import com.example.ecommerceapp.feature.onBourding.OnBourdingActivity;
 import com.example.ecommerceapp.feature.rigester.RegisterActivity;
 import com.example.ecommerceapp.feature.splash.SplashViewModel;
@@ -33,7 +34,7 @@ public class LoginActivity extends BaseActivity {
 
         loginViewModel.doAction.observe(this, action -> {
             if (action == AppAction.ACTION_LOGIN) {
-                Toast.makeText(this, "welcome", Toast.LENGTH_SHORT).show();
+                startNewActivity(MainActivity.class);
             }else if (action==AppAction.ACTION_REGISTER){
                 startNewActivity(RegisterActivity.class);
             }else if (action==ACTION_CHANGE_PASSWORD){

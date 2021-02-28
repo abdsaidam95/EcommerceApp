@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.ecommerceapp.feature.main.home.division.FoodItemViewModel" />
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:onClick="@{v -> viewModel.onClickItem()}"
+
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_25sdp"
+            >
+            <ImageView
+                android:id="@+id/cleaing"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintWidth_percent="0.4"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintVertical_bias="0.5"
+                android:src="@{viewModel.icon}"
+                tools:src="@drawable/ic_hhouse"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cleaing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@{viewModel.foodTitle}"
+                tools:text="الادوات المنزلية" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
