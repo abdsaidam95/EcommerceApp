@@ -19,7 +19,7 @@
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_48sdp"
-            android:background="@color/colorGray"
+            android:background="#4FAE58"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.SearchView

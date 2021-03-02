@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.main.nav;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 
 import com.example.ecommerceapp.util.AppAction;
 

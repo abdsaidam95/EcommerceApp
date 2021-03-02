@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.main.order;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -65,7 +71,7 @@ public class OrdersFragment extends Fragment {
             @Override
             public void transformPage(@NonNull View page, float position) {
                 float r=1-Math.abs(position);
-                page.setScaleY(0.85f+r*0.15f);
+                page.setScaleY(0.90f+r*0.15f);
             }
         });
         viewPager2.setPageTransformer(compositePageTransformer);

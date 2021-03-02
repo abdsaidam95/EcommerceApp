@@ -91,6 +91,7 @@
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:hint="اسم المستخدم"
+                            android:text="@={viewModel.userName}"
                             android:textColorHint="#939393" />
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -114,6 +115,7 @@
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:hint="رقم الجوال"
+                            android:text="@={viewModel.phoneNumber}"
                             android:inputType="phone"
                             android:textColorHint="#939393" />
 
@@ -138,6 +140,8 @@
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:hint="رقم الهاتف"
+                            android:text="@={viewModel.TelephoneNumber}"
+
                             android:inputType="phone"
                             android:textColorHint="#939393" />
 
@@ -162,6 +166,7 @@
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:hint="العنوان"
+                            android:text="@={viewModel.address}"
                             android:textColorHint="#939393" />
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -185,6 +190,7 @@
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:hint="الايميل"
+                            android:text="@={viewModel.email}"
                             android:inputType="textEmailAddress"
                             android:textColorHint="#939393" />
 
@@ -209,6 +215,7 @@
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:hint="الباسوورد"
+                            android:text="@={viewModel.password}"
                             android:inputType="textPassword"
                             android:textColorHint="#939393" />
 
@@ -228,6 +235,15 @@
                         app:layout_constraintStart_toStartOf="@id/passText"
                         app:layout_constraintTop_toBottomOf="@id/passText"
                         app:layout_constraintVertical_bias="0.15" />
+
+                    <ProgressBar
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/passText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:visibility="@{viewModel.isShowing}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/UserNameText" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

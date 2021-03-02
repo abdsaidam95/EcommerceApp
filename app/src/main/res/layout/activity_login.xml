@@ -69,6 +69,7 @@
                 android:background="@android:color/transparent"
                 app:hintEnabled="false"
                 app:layout_constraintVertical_bias="0.15"
+                android:layoutDirection="rtl"
                 app:startIconDrawable="@drawable/ic_email"
                 app:startIconTint="#5FAE4F">
 
@@ -97,6 +98,7 @@
                 app:errorText="@{viewModel.passwordError}"
                 app:layout_constraintTop_toBottomOf="@id/emailText"
                 app:startIconDrawable="@drawable/ic_passward"
+                android:layoutDirection="rtl"
                 app:startIconTint="#5FAE4F">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -159,6 +161,16 @@
                 android:layout_marginStart="@dimen/_4sdp"
                 android:textSize="@dimen/_16sdp"
                 android:text="التسجيل الان" />
+            <ProgressBar
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="@{viewModel.isShowing}"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.main.home;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;

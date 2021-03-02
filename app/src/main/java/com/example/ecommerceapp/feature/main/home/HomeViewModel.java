@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.main.home;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 import com.example.ecommerceapp.base.BaseViewModel;
 import com.example.ecommerceapp.util.AppAction;
 import com.example.ecommerceapp.util.eventBusModel.ActionEvent;

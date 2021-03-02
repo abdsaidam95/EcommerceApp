@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.forgetPass;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
@@ -25,6 +31,7 @@ public class ConfirmPasswerdActivity extends BaseActivity {
         activityConfirmPasswerdBinding = DataBindingUtil.setContentView(this, R.layout.activity_confirm_passwerd);
         activityConfirmPasswerdBinding.setViewModel(confirmPasswardViewModel);
         activityConfirmPasswerdBinding.setLifecycleOwner(this);
+        confirmPasswardViewModel.setContext(this);
         setSupportActionBar(activityConfirmPasswerdBinding.appBar.toolbar);
         initializeToolbar("تغيير كلمة المرور");
         confirmPasswardViewModel.doAction.observe(this, action -> {

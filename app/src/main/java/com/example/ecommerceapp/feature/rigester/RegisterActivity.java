@@ -1,10 +1,18 @@
 package com.example.ecommerceapp.feature.rigester;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.widget.Toast;
 
 import com.example.ecommerceapp.R;
@@ -26,6 +34,7 @@ public class RegisterActivity extends BaseActivity {
         activityRegisterBinding = DataBindingUtil.setContentView(this, R.layout.activity_register);
         activityRegisterBinding.setViewModel(registerViewModel);
         activityRegisterBinding.setLifecycleOwner(this);
+        registerViewModel.setContext(this);
         registerViewModel.doAction.observe(this, action -> {
             if (action == AppAction.ACTION_GO_LOGIN) {
                 startNewActivity(LoginActivity.class);

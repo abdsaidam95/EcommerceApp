@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.main.order;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

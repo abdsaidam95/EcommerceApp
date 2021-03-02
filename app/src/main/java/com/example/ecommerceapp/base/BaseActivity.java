@@ -1,5 +1,10 @@
 package com.example.ecommerceapp.base;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
 import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.login;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
@@ -31,6 +37,7 @@ public class LoginActivity extends BaseActivity {
         activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         activityLoginBinding.setViewModel(loginViewModel);
         activityLoginBinding.setLifecycleOwner(this);
+        loginViewModel.setContext(this);
 
         loginViewModel.doAction.observe(this, action -> {
             if (action == AppAction.ACTION_LOGIN) {

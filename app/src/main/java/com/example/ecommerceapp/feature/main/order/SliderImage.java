@@ -1,5 +1,11 @@
 package com.example.ecommerceapp.feature.main.order;
 
+/**
+ * @author by EngAbdSaidam
+ * project commerce that support dataBinging and MvvMDesignPattern
+ */
+
+
 public class SliderImage {
     public SliderImage(int image, String name, String type, String price, String percent) {
         this.image = image;

@@ -10,6 +10,7 @@
     <string name="please_enter_password">أدخل كلمة المرور</string>
     <string name="nav_home">MENU</string>
     <string name="nav_offer">OFFER</string>
+    <string name="collection_users">Users</string>
     <string name="nav_purchases">purchases</string>
     <string name="main_drawer_open">open_drawer</string>
     <string name="main_drawer_close">close_drawer</string>
