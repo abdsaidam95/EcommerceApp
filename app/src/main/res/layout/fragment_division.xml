@@ -38,6 +38,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +48,6 @@
             app:marginDecoration="@{8}"
             android:layout_marginTop="@dimen/_14sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:FoodAdapter="@{viewModel.menuAdapter}"
             android:paddingBottom="@dimen/_12sdp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

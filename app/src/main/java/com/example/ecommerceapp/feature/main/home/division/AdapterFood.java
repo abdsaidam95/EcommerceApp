@@ -1,5 +1,6 @@
 package com.example.ecommerceapp.feature.main.home.division;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -7,11 +8,24 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ecommerceapp.databinding.ItemFoodBinding;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.util.ArrayList;
 
-public class AdapterFood extends RecyclerView.Adapter<AdapterFood.ViewHolder>{
+public class AdapterFood  extends FirestoreRecyclerAdapter<Food, AdapterFood.ViewHolder> {
     private ArrayList<Food> items = new ArrayList<>();
+
+    /**
+     * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
+     * FirestoreRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    public AdapterFood(@NonNull FirestoreRecyclerOptions<Food> options) {
+        super(options);
+
+    }
 
 
     @NonNull
@@ -22,17 +36,17 @@ public class AdapterFood extends RecyclerView.Adapter<AdapterFood.ViewHolder>{
         return new AdapterFood.ViewHolder(itemBinding);
     }
 
+
+
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bind(items.get(position));
+    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Food model) {
+        Log.d("rrrrr","ffdg");
+        holder.bind(model);
 
 
     }
 
-    @Override
-    public int getItemCount() {
-        return items.size();
-    }
+
     public void setData(ArrayList<Food> data) {
         items.clear();
         items.addAll(data);

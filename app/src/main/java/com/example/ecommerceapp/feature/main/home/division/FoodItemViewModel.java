@@ -14,7 +14,7 @@ public class FoodItemViewModel extends BaseViewModel {
     private int position;
 
     public MutableLiveData<String> foodTitle = new MutableLiveData<>();
-    public MutableLiveData<Integer> icon = new MutableLiveData<>();
+    public MutableLiveData<String> icon = new MutableLiveData<>();
     public FoodItemViewModel(Food menu) {
         this.food = menu;
     }
