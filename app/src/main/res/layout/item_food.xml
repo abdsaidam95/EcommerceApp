@@ -25,36 +25,34 @@
             android:layout_height="wrap_content"
             android:paddingBottom="@dimen/_25sdp"
             >
-            <ImageView
+            <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/cleaing"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-                app:layout_constraintWidth_percent="0.4"
-                app:layout_constraintDimensionRatio="1:1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                app:layout_constraintWidth_percent="0.7"
+                app:loadImage="@{viewModel.icon}"
+                app:placeholderImageScaleType="centerCrop"
+                android:background="@android:color/transparent"
                 app:layout_constraintVertical_bias="0.5"
-                android:src="@{viewModel.icon}"
-                tools:src="@drawable/ic_hhouse"
-
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/cleaing"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="@dimen/_16sdp"
-                android:paddingEnd="@dimen/_8sdp"
                 android:paddingStart="@dimen/_8sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingEnd="@dimen/_8sdp"
                 android:text="@{viewModel.foodTitle}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cleaing"
                 tools:text="الادوات المنزلية" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.cardview.widget.CardView>
 </layout>

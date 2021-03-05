@@ -1,5 +1,6 @@
 package com.example.ecommerceapp.feature.main.home.foodDetails;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 

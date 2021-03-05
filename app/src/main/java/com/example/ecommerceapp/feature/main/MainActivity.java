@@ -14,10 +14,13 @@ import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -30,7 +33,9 @@ import com.example.ecommerceapp.base.BaseActivity;
 import com.example.ecommerceapp.databinding.ActivityMainBinding;
 import com.example.ecommerceapp.feature.main.home.HomeFragment;
 import com.example.ecommerceapp.feature.main.home.division.DivisionFragment;
+import com.example.ecommerceapp.feature.main.home.foodDetails.AdapterFoodDetails;
 import com.example.ecommerceapp.feature.main.home.foodDetails.FoodDetailsFragment;
+import com.example.ecommerceapp.feature.main.home.foodDetails.Order;
 import com.example.ecommerceapp.feature.main.nav.Menu;
 import com.example.ecommerceapp.feature.main.order.OrdersFragment;
 import com.example.ecommerceapp.feature.main.purchases.PurchasesFragment;
@@ -38,7 +43,11 @@ import com.example.ecommerceapp.feature.main.settings.SettingsFragment;
 import com.example.ecommerceapp.feature.main.support.SupportFragment;
 import com.example.ecommerceapp.util.AppAction;
 import com.example.ecommerceapp.util.eventBusModel.ActionEvent;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -49,6 +58,9 @@ import static com.example.ecommerceapp.util.AppAction.ACTION_GO_DETAIL;
 import static com.example.ecommerceapp.util.AppAction.ACTION_GO_DIVISION;
 
 public class MainActivity extends BaseActivity {
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    //  private CollectionReference notebookRef = db.collection("Beans");
+    private CollectionReference notebookRef = db.collection("Beans");
 
     private MainViewModel viewModel;
     private ActivityMainBinding binding;
@@ -57,6 +69,8 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout drawer;
     private NavigationView navigationView;
      MenuItem menuItemNotifications;
+    private AdapterFoodDetails adapter;
+
     Toolbar toolbar;
 
     private TextView textViewNotification;
@@ -77,6 +91,7 @@ public class MainActivity extends BaseActivity {
         initializeView();
 
     }
+
     private void initializeView() {
         initializeDrawer();
     }

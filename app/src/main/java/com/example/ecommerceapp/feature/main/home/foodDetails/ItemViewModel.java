@@ -18,7 +18,7 @@ public class ItemViewModel extends BaseViewModel {
     public MutableLiveData<String> title = new MutableLiveData<>();
     public MutableLiveData<String> type = new MutableLiveData<>();
     public MutableLiveData<String> num = new MutableLiveData<>();
-    public MutableLiveData<Integer> image = new MutableLiveData<>();
+    public MutableLiveData<String> image = new MutableLiveData<>();
     public ItemViewModel(Order order, int position) {
         this.order = order;
         this.positions = position;
@@ -29,33 +29,33 @@ public class ItemViewModel extends BaseViewModel {
         title.setValue(order.getTitle());
         type.setValue(order.getTypeFood());
         price.setValue(order.getPrice());
-        num.setValue(order.getNum());
+//        num.setValue(order.getNum());
     }
     public void addClick() {
-        s = Integer.decode(order.getNum());
-        s++;
-        order.setNum(String.valueOf(s));
-        num.setValue(order.getNum());
-        EventBus.getDefault().post(new ActionEvent(AppAction.ACTION_SELECT_SINGLE_CITY));
+//        s = Integer.decode(order.getNum());
+//        s++;
+//        order.setNum(String.valueOf(s));
+//        num.setValue(order.getNum());
+//        EventBus.getDefault().post(new ActionEvent(AppAction.ACTION_SELECT_SINGLE_CITY));
 
 
     }
 
     public void minusClick() {
-        if ((Integer.decode(order.getNum()) <= 0)) {
-            num.setValue(order.getNum());
-
-        } else {
-            s = Integer.decode(order.getNum());
-            s--;
-            order.setNum(String.valueOf(s));
-            num.setValue(order.getNum());
-            EventBus.getDefault().post(new ActionEvent(AppAction.ACTION_SELECT_SINGLE_CITY));
+//        if ((Integer.decode(order.getNum()) <= 0)) {
+//            num.setValue(order.getNum());
+//
+//        } else {
+//            s = Integer.decode(order.getNum());
+//            s--;
+//            order.setNum(String.valueOf(s));
+//            num.setValue(order.getNum());
+//            EventBus.getDefault().post(new ActionEvent(AppAction.ACTION_SELECT_SINGLE_CITY));
 
 
         }
 
-    }
+
 
     public void addCartClick() {
         EventBus.getDefault().post(new ActionEvent(AppAction.ADD_CART,order,positions));

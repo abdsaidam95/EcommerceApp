@@ -1,30 +1,30 @@
 package com.example.ecommerceapp.feature.main.home.foodDetails;
 
 public class Order {
-    private String price;
-    private int image;
+    private String image;
+    private String price ;
+    private String title ;
     private String typeFood;
-    private String title;
-    private String num;
+//    private String num;
 
-    public String getNum() {
-        return num;
+    //    public String getNum() {
+//        return num;
+//    }
+//
+//    public void setNum(String num) {
+//        this.num = num;
+//    }
+    public Order() {
     }
 
-    public void setNum(String num) {
-        this.num = num;
-    }
-
-    public Order(String price, int image, String typeFood, String title, String num) {
+    public Order(String price, String image, String typeFood, String title) {
         this.price = price;
         this.image = image;
         this.typeFood = typeFood;
         this.title = title;
-        this.num = num;
+//        this.num = num;
     }
 
-    public Order() {
-    }
 
     public String getPrice() {
         return price;
@@ -34,11 +34,11 @@ public class Order {
         this.price = price;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

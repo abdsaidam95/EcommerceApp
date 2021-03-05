@@ -40,7 +40,6 @@ public class AdapterFood  extends FirestoreRecyclerAdapter<Food, AdapterFood.Vie
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Food model) {
-        Log.d("rrrrr","ffdg");
         holder.bind(model);
 
 
